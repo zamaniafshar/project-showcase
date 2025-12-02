@@ -1,101 +1,68 @@
-# Signal ECU
+# Signal ECU 🚛 🔧
 
-Signal ECU is a Flutter-based mobile application designed to help users interact with and monitor ECU-related signals in a modern, user-friendly UI.  
-It focuses on providing clear visualization, essential information, and convenient tools for working with ECU data on both Android and iOS.
+**Advanced Heavy Machinery Diagnostics & Educational Platform**
 
-> This repository is part of my portfolio and is intended to demonstrate my mobile development skills in Flutter (Dart), state management, theming, and app architecture.
-
----
-
-## ℹ️ Application Information
-
-- **Category**: *[Fill from `categoryDes`, e.g. “Automotive · Utilities · Tools”]*  
-- **Supported Platforms**: Android, iOS  
-- **Required OS**: *[Fill from `requiredOSDes`, e.g. “Android 8.0+ / iOS 13+”]*  
-- **Release Date**: *[Fill from `releaseDateDes`, e.g. “November 2025”]*  
-- **Website**: `Constants.appWebsiteUrl`  
-- **Version**: Displayed in‑app via the `AppVersionText` widget (follows semantic versioning)
+Bridging the gap between field mechanics and complex electronic control systems through intelligent diagnostics and dynamic content.
 
 ---
 
-## 📝 Description
+## 📖 Overview
 
-The in-app About screen describes Signal ECU with two main sections of text:
+Signal ECU is a specialized mobile application built with Flutter designed to assist heavy-duty truck mechanics, workshops, and automotive students in diagnosing and repairing Electronic Control Units (ECUs).
 
-- **Description (1)** – `descriptionsText1`  
-  A high-level overview of what Signal ECU does and who it is for.  
-  *Example (replace with your real wording):*  
-  “Signal ECU helps technicians and enthusiasts inspect, read and understand ECU signals in a clean and accessible interface.”
+Unlike standard OBD tools that only display raw error codes, Signal ECU provides a comprehensive troubleshooting ecosystem. It combines real-time diagnostic logic with a server-driven educational content engine, guiding users from initial error detection to final repair.
 
-- **Description (2)** – `descriptionsText2`  
-  A more detailed explanation of usage or typical workflows.  
-  *Example (replace with your real wording):*  
-  “Use the app to browse available signals, review important parameters, and access related information in a structured way.”
+The application serves as both a technical tool for professionals and a learning platform for newcomers, delivering up-to-date repair manuals, video tutorials, and schematic articles directly from the server.
 
-You can update the actual localized strings in your language files; this README is aligned with that About screen structure.
 
----
+<p align="center">
+    <a href="https://zaya.io/signalecu">
+      <img src="https://github.com/zamaniafshar/project-showcase/blob/b8a7f29aeb1a10173303a763aed19731ae9a99ef/SignalECU/resources/android-apk-badge-seeklogo.png" height="60" alt="Bazar" </a>
+    <a href="https://anardoni.com/ios/app/comexampletreenode">
+     <img src="https://github.com/zamaniafshar/project-showcase/blob/8057b71fe0b24eb526993d43d0595c7143c0dddf/SignalECU/resources/anardoni-badge-dark-persian.png" height="60" alt="Google Play"/></a>
+  </p>
 
-## 🧰 Key Features
+## 📸 Screenshots
 
-As shown in the About screen (`keyFeatures` / `keyFeaturesDes`):
+| | |
+|:-------------------------:|:-------------------------:|
+| <img src="resources/1.png" width="400"> | <img src="resources/2.png" width="400"> |
+| <img src="resources/3.png" width="400"> | <img src="resources/4.png" width="400"> |
+| <img src="resources/5.png" width="400"> | <img src="resources/6.png" width="400"> |
+| <img src="resources/7.png" width="400"> | <img src="resources/8.png" width="400"> |
+| <img src="resources/9.png" width="400"> | 
 
-- **Key Features Summary**  
-  *Example bullets – align them with `keyFeaturesDes` in your localization:*
-  - Real-time viewing of ECU-related signal information.
-  - Clear, RTL-friendly UI with theming support (light/dark).
-  - Organized information cards for app version, category, required OS, and website.
-  - Smooth page transitions and animations using `animate_do`.
-  - Modern responsive layout using `flutter_screenutil`.
 
-- **Internet Connection Requirement**  
-  The About screen highlights: `internerConnectionRequired`  
-  *Example wording:*  
-  “An active internet connection is required for some features (such as fetching the latest data or remote resources).”
 
----
+## ✨ Key Features
 
-## 🧱 Architecture & Tech Stack
-
-- **Framework**: Flutter (Dart)
-- **State / Dependency Management**: GetX (`Get.find<ThemeController>()` for theming)
-- **Navigation**: `auto_route`
-- **Theming & Layout**:
-  - Custom `ThemeController` for app-wide theme management
-  - `flutter_screenutil` for responsive sizing (`.w`, `.h`, `.sp`, `.r`)
-  - Right-to-left (`TextDirection.rtl`) support
-- **UI Components**:
-  - `AppBaseScreen` for base layout and gradient backgrounds
-  - `CustomAppBar` for consistent app bars
-  - `AppCustomCard` for feature-specific cards
-  - Animated transitions: `SlideInUp`, `FadeIn` from `animate_do`
-- **Code Organization**:
-  - [lib/views/utility/about_app_screen.dart](cci:7://file:///Users/mac/StudioProjects/signal_ecu/lib/views/utility/about_app_screen.dart:0:0-0:0) for the About screen
-  - Common widgets & extensions under `common/widgets` and `common/extensions.dart`
-  - Constants in `common/constants/constants.dart`
+### 🛠 Smart Diagnostics & Tools
+- **Intelligent Troubleshooting:** Goes beyond simple error codes by offering step-by-step diagnostic workflows based on field-tested failure patterns.
+- **Interactive Schematics:** High-performance image zooming (photo_view) allows mechanics to inspect complex wiring diagrams in minute detail.
+- **QR Code Integration:** Built-in scanner (qr_flutter) for quick equipment identification or linking physical manuals to digital assets.
 
 ---
 
-## 📱 Download / References
-
-You can use these badges as reference buttons for Android and iOS once you have the links:
-
-[//]: # "Replace the URLs below with your actual store / download links."
-
-- **Android**  
-  [![Android Reference](https://img.shields.io/badge/Android-App-green?logo=android&logoColor=white)](https://your-android-link-here)
-
-- **iOS**  
-  [![iOS Reference](https://img.shields.io/badge/iOS-App-black?logo=apple&logoColor=white)](https://your-ios-link-here)
-
-> Once you provide the real links, just replace `https://your-android-link-here` and `https://your-ios-link-here` above.
+### 📚 Rich Media & Server-Driven Content
+- **Dynamic Rendering:** utilizes flutter_html and webview_flutter to render rich text, tables, and media directly from the backend, allowing instant content updates without app store releases.
+- **Video Integration:** Seamless playback of educational content using Youtubeer_flutter and native video players.
+- **Offline Caching:** Powered by hive_ce (NoSQL database) and cached_network_image to ensure diagnostic data is available even in remote areas with poor connectivity.
 
 ---
 
-## 🚀 Getting Started (Development)
+### 🔐 Security & Privacy
+- **Content Protection:** Implements screen capture prevention (no_screenshot) to protect proprietary educational content and diagnostic intellectual property.
+- **Secure Authentication:** Utilizes flutter_secure_storage and OTP autofill (otp_autofill) for a seamless and secure user login experience.
 
-1. **Clone the repository**
+---
 
-   ```bash
-   git clone [https://github.com/your-username/signal_ecu.git](https://github.com/your-username/signal_ecu.git)
-   cd signal_ecu
+### 🌍 Global & Localized Experience
+- **Persian Localization:** specialized support for the Iranian market, including Jalali Calendar integration via shamsi_date.
+- **Multi-Theme UI:** Responsive design (flutter_screenutil) with robust light/dark modes and smooth animations (flutter_animate, skeletonizer) for optimal usability in diverse environments (e.g., dark repair pits vs. bright sunlight).
+
+---
+
+## 🏗 Technical Highlights
+- **State Management & Routing:** Leverages GetX for reactive state management and AutoRoute for strongly-typed, deep-link capable navigation (app_links).
+- **Code Generation:** Built with robustness in mind using freezed and json_serializable for immutable data models and type-safe API interactions.
+- **Push Notifications:** Integrated Firebase Cloud Messaging and local notifications to keep mechanics updated on new courses and critical app alerts.
